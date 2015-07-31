@@ -1,0 +1,25 @@
+application: fit-visitor-597
+version: 1
+runtime: php55
+api_version: 1
+threadsafe: yes
+
+handlers:
+- url: /css
+  static_dir: app/webroot/css
+ 
+- url: /js
+  static_dir: app/webroot/js
+ 
+- url: /img
+  static_dir: app/webroot/img
+ 
+- url: /files
+  static_dir: app/webroot/files
+ 
+- url: /favicon.ico
+  static_files: app/webroot/favicon.ico
+  upload: app/webroot/favicon.ico
+ 
+- url: /.*
+  script: app/webroot/index.php
